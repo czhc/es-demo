@@ -26,7 +26,7 @@ Quick walkthrough of setting up Amazon Elasticsearch + Kibana.
         1. Create Cognito User Pool. 
         2. In User Pool, add App integration > Domain name.
         3. Create Cognito Identity Pool. Check User Pool App integration for App client ID.
-        4. Check _Enable access to unauthenticated identities_ in Identity Pool 
+        4. :ballot_box_with_check: _Enable access to unauthenticated identities_ in Identity Pool 
         
     4. JSON defined access policy: 
     
