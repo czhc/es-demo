@@ -22,9 +22,8 @@
     2. Fine-grained access control: skip
     3. Enable Cognito Authentication: 
         1. Create Cognito User Pool. 
-        2. In User Pool, create Domain name and Add an app client.
-        3. Enable username password based authentication.
-        2. Create Cognito Identity Pool
+        2. In User Pool, create Domain name.
+        2. Create Cognito Identity Pool. Check App integration for default-created App client. 
     4. JSON defined access policy: 
     
         ```
