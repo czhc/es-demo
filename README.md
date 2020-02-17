@@ -22,8 +22,10 @@
     2. Fine-grained access control: skip
     3. Enable Cognito Authentication: 
         1. Create Cognito User Pool. 
-        2. In User Pool, create Domain name.
-        2. Create Cognito Identity Pool. Check App integration for default-created App client. 
+        2. In User Pool, add App integration > Domain name.
+        3. Create Cognito Identity Pool. Check User Pool App integration for App client ID.
+        4. Check _Enable access to unauthenticated identities_ in Identity Pool 
+        
     4. JSON defined access policy: 
     
         ```
@@ -75,3 +77,25 @@
         "took":82,"timed_out":false,"_shards":{"total":5,"successful":5,"skipped":0,"failed":0},"hits":{"total":{"value":2,"relation":"eq"},"max_score":0.41501677,"hits":[{"_index":"movies","_type":"_doc","_id":"2","_score":0.41501677,"_source":{"director": "Frankenheimer, John", "genre": ["Drama", "Mystery", "Thriller", "Crime"], "year": 1962, "actor": ["Lansbury, Angela", "Sinatra, Frank", "Leigh, Janet", "Harvey, Laurence", "Silva, Henry", "Frees, Paul", "Gregory, James", "Bissell, Whit",...
     ```
     
+# Viewing Data on Kibana
+
+1. Create `admin` user in User Pool
+2. Check that Identity Pool is created
+2. Add the following into domain Access Policy: 
+    ```
+        {
+          "Effect": "Allow",
+          "Principal": {
+            "AWS": [
+              "arn:aws:iam::<ACCOUNT_ID>:role/Cognito_<ES DOMAIN>Auth_Role"
+            ]
+          },
+          "Action": [
+            "es:ESHttp*"
+          ],
+          "Resource": "arn:aws:es:<REGION>:<ACCOUNT_ID>:domain/<DOMAIN-NAME>/*"
+        }  
+    ```
+
+3. Open Kibana endpoint and Log in.
+
