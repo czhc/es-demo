@@ -81,7 +81,7 @@ Quick walkthrough of setting up Amazon Elasticsearch + Kibana.
     
 # Viewing Data on Kibana
 
-1. Create `admin` user in User Pool
+1. Create `admin` user in User Pool with a password
 2. Check that Identity Pool is created
 2. Add the following into domain Access Policy: 
     ```
