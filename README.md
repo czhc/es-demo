@@ -98,5 +98,11 @@
     ```
 
 3. Open Kibana endpoint and Log in.
+
+![](/img/Screenshot%202020-02-18%20at%204.49.12%20AM.png)
+
 4. Create index pattern as `movies`.
 5. Create visualization. Try a vertical bar graph and set X-Axis to `Aggregation:Terms`, `Field:genre.keyword`.
+
+![](./img/Screenshot%202020-02-18%20at%204.48.46%20AM.png)
+
