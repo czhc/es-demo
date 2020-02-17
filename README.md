@@ -110,3 +110,10 @@ Quick walkthrough of setting up Amazon Elasticsearch + Kibana.
 
 
 This demo does not cover concepts on cluster sizing, dedicated master and replication, deploying AES in a VPC with fine-grained access controls. YMMV.
+
+
+/shrug
+
+![](./img/demo-dashboard.png)
+
+
